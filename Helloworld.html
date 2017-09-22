@@ -7,6 +7,34 @@
   <title>[ Test Page ]</title>
 </head>
 <body>
+  <script>
+     // alert('Hello world');
+     function numbering() {
+       i = 0;
+       while(i <10){
+         document.write(i);
+         i += 1;
+       }
+     }
+    numbering();
+
+  /*  function get_members(args) {
+      return args;
+    }
+    alert(get_members('agoing'));
+    alert(get_members('bgoing'));
+    alert(get_members('cgoing')); */
+
+    var members = ['ago', 'bgo', 'cgo'];
+
+    function get_members(member) {
+      return member;
+    }
+
+    for(int i = 0; i < 3; i++) {
+      alert(get_members(members[i]));
+    }
+  </script>
 <header>
   <h1> Test Page </h1>
   <br>
@@ -32,7 +60,5 @@
 </address>
 <p><samll>@copyleft 2017.09.21 Simon.org</samll></p>
 </footer>
-
-
 </body>
 </html>
