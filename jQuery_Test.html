@@ -11,10 +11,64 @@
         <li>empty</li>
     </ul>
     <input id="execute_btn" type="button" value="execute" />
->    <script type="text/javascript">
+    <script type="text/javascript">
      $('#execute_btn').click(function(){
         $('#list li').text('jquery_Test coding');
      })
+
+      var obj = {
+        string: 'zero',
+        yell : function() {
+          //alert(this.string);
+          document.write(this.string);
+        }
+      };
+
+      var obj2 = {
+        string: 'what?'
+      };
+
+    //Test 1
+    //  obj.yell();   //'zero'
+    //  obj.yell.call(obj2);   //what?
+
+   //Test 2
+   //var yell2 = obj.yell.bind(obj);
+   //yell2();    //what?
+
+   //Test 3
+   var dateChecker = function(){
+     var date = new Date();
+     alert(date);
+   }
+   //dateChecker();
+
+   //Test 4
+   function addOne(x){
+     var y = x + 1;
+     return y;
+   }
+
+  function multiply(x, y){
+    return x * y;
+  }
+
+  var l = multiply(5, 6);
+  var m = multiply(10, 1);
+
+  var n = multiply(addOne(2), addOne(4));
+  alert(n);
+
+  var mother = function(func){
+    func();
+  }
+
+  var children = function(){
+    alert('HI~~~~~~~~~~~~~~~~~!!');
+  }
+
+  mother(children);
+
     </script>
 </body>
 </html>

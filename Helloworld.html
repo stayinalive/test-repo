@@ -8,7 +8,7 @@
 </head>
 <body>
   <script>
-     // alert('Hello world');
+     alert('Hello world');
      function numbering() {
        i = 0;
        while(i <10){
@@ -17,36 +17,34 @@
        }
      }
     numbering();
+    document.write("\n");
 
-  /*  function get_members(args) {
-      return args;
-    }
-    alert(get_members('agoing'));
-    alert(get_members('bgoing'));
-    alert(get_members('cgoing')); */
+    function draw_heart() {
+        var i, j;
 
-    var members = ['ago', 'bgo', 'cgo'];
+        for(i = 4; i < 10; i +=2){
+            for(j = 0; j <= (10 - i); j++){ document.write(" "); }
+            for(j = 0; j <= i * 2; j++){ document.write("♥"); }
+            for(j = 0; j <= (10 - i) * 2; j++){ document.write(" "); }
+            for(j = 0; j <= i * 2; j++){ document.write("♥"); }
+            document.write("\n");
+        }
 
-    function get_members(member) {
-      return member;
-    }
-
-    for(int i = 0; i < 3; i++) {
-      alert(get_members(members[i]));
-    }
+        for(i = 20; i >= 0; i -= 2){
+            for(j = 0; j <= 20 - i; j++){ document.write(" "); }
+            for(j = 0; j <= i * 2; j++){ document.write("♥"); }
+            document.write("\n");
+        }
+      }
   </script>
 <header>
   <h1> Test Page </h1>
   <br>
-    <p>현재 시간 :</p><p><time datetime="date()"></time></p>
+    <p>현재 시간 :</p><p></p>
   <h3> → HTML5 Tags </h3>
 </header>
-    <div>-------------------------------------------------------</div>
-      <area shape="rect" coords="200, 300" href="" alt="Area Zone">
-        <img src="..\Img_Resource\MyCom.jpg" alt="Computer image" width="200" height="300">
-    <div>-------------------------------------------------------</div>
-    <base href="http://www.naver.com" target="_blank">
 
+  <button onclick="draw_heart()">Click Me!</button>
     <div>-------------------------------------------------------</div>
     <br><br>
 <footer>
